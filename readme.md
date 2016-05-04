@@ -11,7 +11,9 @@ Run `brpt` and you will automatically get an instance of `bitcoind` set up runni
 You will get a continuous REPL that will allow you to rapidly enter many different passwords fast.
 
 ```
-brpt
+$ brpt
+• bitcoind is starting...
+• bitcoind server ready
 > admin
 ✗ - invalid password admin
 > adminadmin
@@ -21,7 +23,9 @@ brpt
 When one matches the REPL will exit and congratulate you.
 
 ```
-brpt
+$ brpt
+• bitcoind is starting...
+• bitcoind server ready
 > mypassword
 ✓ - correct password mypassword
 ```

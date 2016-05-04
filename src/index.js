@@ -49,7 +49,7 @@ function waiter() {
 
 startBitcoinDaemon()
 
-console.log('bitcoind is starting...')
+console.log('• bitcoind is starting...'.magenta)
 
 export function promiseDebounce (fn, delay, count) {
   let working = 0
@@ -79,7 +79,7 @@ export function wrapAttempt(text) {
       if (err.message === 'Error: The wallet passphrase entered was incorrect.') {
         console.log(`✗ - invalid password ${text}`.red)
       } else {
-        console.log(err.message)
+        console.log(`! ${err.message}`.cyan)
       }
     })
 }
@@ -88,7 +88,7 @@ let debouncedAttempt = promiseDebounce(wrapAttempt, rps, 1)
 
 waiter().then(() => {
 
-  console.log('bitcoind server ready')
+  console.log('• bitcoind server ready'.magenta)
 
   let replServer = repl.start({
     ignoreUndefined: true,
@@ -103,7 +103,7 @@ waiter().then(() => {
     try {
       process.kill(-child.pid, "SIGINT")
     } catch (err) {
-      console.log(`could not kill process ${-child.pid}`)
+      console.log(`! could not kill process ${-child.pid}`.cyan)
     }
     process.exit();
   });

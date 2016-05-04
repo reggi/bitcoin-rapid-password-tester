@@ -1,8 +1,12 @@
-# *bitcoin-rapid-password-tester (BRPT)*
+# *bitcoin-rapid-password-tester (`brpt`)*
 
-BRPT allows you to quickly try a bunch of different passwords in the terminal with one command.
+```
+npm i bitcoin-rapid-password-tester -g
+```
 
-Run `brpt` and a `bitcoind` instance will be spun up in the background to the default directory (`~/Library/Application Support/Bitcoin`). You can change the default directory with the `--datadir` flag.
+`brpt` allows you to quickly try a bunch of different passwords in the terminal with one command.
+
+Run `brpt` and you will automatically get an instance of `bitcoind` set up running in the background to the default directory (`~/Library/Application Support/Bitcoin`). You can change the default directory with the `--datadir` flag.
 
 You will get a continuous REPL that will allow you to rapidly enter many different passwords fast.
 
